@@ -43,4 +43,15 @@ public class Celular {
 		return IMEI != null && IMEI.equals(celular.getIMEI());		
 
 	}
+	
+	// Para hashcode
+    // Se x.equals(y) == true y.hashCode() == x.hashCode();
+    // y.hashCode() == x.hashCode() não necessariamente o equals deverá retornar true
+    // x.equals(y) == false
+    // y.hashCode() != x.hashCode() x.equals(y) deverá ser false
+	
+	@Override
+	public int hashCode() {
+		return this.IMEI != null ? this.IMEI.hashCode() : 1;
+	}
 }
