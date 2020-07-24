@@ -54,4 +54,11 @@ public class Celular {
 	public int hashCode() {
 		return this.IMEI != null ? this.IMEI.hashCode() : 1;
 	}
+
+	@Override
+	public String toString() {
+		return "Celular [IMEI=" + IMEI + ", nome=" + nome + "]";
+	}
+	
+	
 }
