@@ -1,4 +1,4 @@
-package br.com.java.collections.comparable;
+package br.com.java.collections.ordenacao;
 
 public class Produto implements Comparable<Produto>{
 

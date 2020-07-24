@@ -18,5 +18,6 @@ public class OrdenaListaBasico {
 		for (String nome : nomes) {
 			System.out.println(nome);
 		}
+		
 	}
 }

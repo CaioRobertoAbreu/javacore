@@ -1,7 +1,8 @@
-package br.com.java.collections.comparable;
+package br.com.java.collections.ordenacao;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class OrdenaProdutos {
@@ -19,15 +20,32 @@ public class OrdenaProdutos {
 		produtos.add(produto4);
 		
 		for (Produto p : produtos) {
-			System.out.println(p);
+			System.out.println(p); //Imprimindo na ordem de inserção
 		}
 		
-		Collections.sort(produtos);
+		Collections.sort(produtos);//Ordenando conforme implementação na classe Produto usando COMPARABLE
 		
 		System.out.println("\n");
 		for (Produto p : produtos) {
 			System.out.println(p);
 		}
+		
+		System.out.println("\n");
+		Collections.sort(produtos, new ProdutoOrdenaNomeComparetor());
+		for (Produto p : produtos) {
+			System.out.println(p);
+		}
+		
 	}
-
 }
+
+class ProdutoOrdenaNomeComparetor implements Comparator<Produto>{
+
+	@Override
+	public int compare(Produto o1, Produto o2) {
+		return o1.getNome().compareTo(o2.getNome());
+	}
+	
+}
+
+
