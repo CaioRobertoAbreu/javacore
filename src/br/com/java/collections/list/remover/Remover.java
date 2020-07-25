@@ -1,10 +1,10 @@
-package br.com.java.collections.remover;
+package br.com.java.collections.list.remover;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import br.com.java.collections.ordenacao.Produto;
+import br.com.java.collections.list.ordenacao.Produto;
 
 public class Remover {
 	public static void main(String[] args) {

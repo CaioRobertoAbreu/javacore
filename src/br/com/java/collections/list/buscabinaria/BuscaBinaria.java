@@ -1,11 +1,11 @@
-package br.com.java.collections.buscabinaria;
+package br.com.java.collections.list.buscabinaria;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import br.com.java.collections.ordenacao.Produto;
+import br.com.java.collections.list.ordenacao.Produto;
 
 public class BuscaBinaria {
 	

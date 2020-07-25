@@ -1,4 +1,4 @@
-package br.com.java.collections.conversaoarray_colecoes;
+package br.com.java.collections.list.conversaoarray_colecoes;
 
 import java.util.ArrayList;
 import java.util.Arrays;
