@@ -30,11 +30,11 @@ public class BuscaBinaria {
 	 */
 	public static void main(String[] args) {
 		List<Produto> produtos = new ArrayList<Produto>();
-		produtos.add(new Produto(4131, "Mouse", 56.9));
-		produtos.add(new Produto(4223, "Teclado", 96.9));
-		produtos.add(new Produto(4541, "Monitor", 570.9));
-		produtos.add(new Produto(4421, "WebCam", 66.9));
-		produtos.add(new Produto(4652, "Cadeira Gamer", 1600.9));
+		produtos.add(new Produto(4131, "Mouse", 56.9, 2));
+		produtos.add(new Produto(4223, "Teclado", 96.9, 6));
+		produtos.add(new Produto(4541, "Monitor", 570.9, 8));
+		produtos.add(new Produto(4421, "WebCam", 66.9, 5));
+		produtos.add(new Produto(4652, "Cadeira Gamer", 1600.9, 4));
 		
 		Collections.sort(produtos); //Usando a Ordenação COMPARABLE (por id)
 
@@ -44,8 +44,8 @@ public class BuscaBinaria {
 		
 		System.out.println("\n");
 		
-		Produto produto = new Produto(6654, "Mouse", 56.9); //Qual posicao devera estar
-		Produto produto2 = new Produto(4131, "Mouse", 56.9); //Qual posicao este produto esta
+		Produto produto = new Produto(6654, "Mouse", 56.9, 4); //Qual posicao devera estar
+		Produto produto2 = new Produto(4131, "Mouse", 56.9, 4); //Qual posicao este produto esta
 		System.out.println(Collections.binarySearch(produtos, produto));
 		System.out.println(Collections.binarySearch(produtos, produto2));
 		
@@ -58,7 +58,7 @@ public class BuscaBinaria {
 			System.out.println(p);
 		}
 		
-		Produto produto3 = new Produto(5421, "Memoria Ram", 400.); //Qual posicao deveria estar
+		Produto produto3 = new Produto(5421, "Memoria Ram", 400., 7); //Qual posicao deveria estar
 		System.out.println("\n");
 		System.out.println(Collections.binarySearch(produtos, produto3, new ProdutoOrdenaNomeComparetor()));
 		System.out.println(Collections.binarySearch(produtos, produto2, new ProdutoOrdenaNomeComparetor()));
