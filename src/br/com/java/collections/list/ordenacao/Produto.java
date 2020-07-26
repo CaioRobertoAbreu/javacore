@@ -4,10 +4,10 @@ public class Produto implements Comparable<Produto>{
 
 	private Integer id;
 	private String nome;
-	private double preco;
+	private Double preco;
 	private int quantidade;
 
-	public Produto(int id, String nome, double preco, int quantidade) {
+	public Produto(int id, String nome, Double preco, int quantidade) {
 		this.id = id;
 		this.nome = nome;
 		this.preco = preco;
@@ -28,7 +28,7 @@ public class Produto implements Comparable<Produto>{
 		return nome;
 	}
 
-	public double getPreco() {
+	public Double getPreco() {
 		return preco;
 	}
 
