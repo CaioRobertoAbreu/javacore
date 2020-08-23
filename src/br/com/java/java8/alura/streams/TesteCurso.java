@@ -21,8 +21,10 @@ public class TesteCurso {
 
         System.out.println("\nPegando alunos de todos os cursos");
         cursos.stream()
-                .map(curso -> curso.getAlunos())
-                .forEach(curso -> System.out.println(curso));
+                .map(Curso::getAlunos)
+                .forEach(System.out::println);
+//                ...(curso -> curso.getAlunos())
+//                .forEach(curso -> System.out.println(curso));
 
         System.out.println("\nOrdenando pela quantidade de alunos usando método sort");
 //        cursos.sort((alunos1, alunos2) -> alunos1.getAlunos() - alunos2.getAlunos()); -> Exemplo para atributos int
@@ -37,7 +39,7 @@ public class TesteCurso {
                 .forEach(aluno -> System.out.println(aluno.getAlunos()));
 
         System.out.println("\nImprimindo total de alunos");
-        int soma = cursos.stream().mapToInt(c -> c.getAlunos()).sum();
+        int soma = cursos.stream().mapToInt(Curso::getAlunos).sum(); //c -> c.getAlunos()
         System.out.println("Total: " + soma);
     }
 }
